@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            font-family: sans-serif;
+        }
+    </style>
+</head>
+<body>
+        <table cellPadding="6">
+            <tr>
+                <td><p>Тип булочки: </p></td>
+                <td><select name="Bulochka" id=""><option value="burger">Булочка для гамбургера</option></select></td>
+            </tr>
+            <tr>
+                <td><p>Тип Мяса: </p></td>
+                <td><select name="meat" id="">
+                        <option value="beef">говядина</option>
+                        <option value="pork">свинина</option>
+                        <option value="chiken">курица</option>
+                    </select></td>
+            </tr>
+            <tr>
+                <td><p>Опции</p></td>
+                <td>
+                    <input type="checkbox" value="tomatoes"> Томаты <br>
+                    <input type="checkbox" value="Salad"> Салат <br>
+                </td>
+
+            </tr>
+
+            <tr>
+                <td><p>Адрес</p></td>
+                <td>
+                    <input type="text" name="address">
+                </td>
+            </tr>
+            <tr>
+                <td><p>Ф.И.О</p></td>
+                <td>
+                    <input type="text" name="fullname">
+                </td>
+            </tr>
+
+            <tr>
+                <td><p>Желаемое время доставки</p></td>
+                <td>
+                    <input type="time" step="1" name="time">
+                </td>
+            </tr>
+
+
+            <tr>
+                <td><p>Выбор бургера: </p></td>
+                <td><select name="meat" id="">
+                        <option value="beef">Гамбургер</option>
+                        <option value="pork">Чизбургер</option>
+                        <option value="chiken">Двойной Гамбургер</option>
+                    </select></td>
+            </tr>
+
+        </table>
+
+        <input type="submit" value="Заказать">
+
+
+    </form>
+</body>
+</html>
