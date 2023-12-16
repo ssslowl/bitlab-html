@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            font-family: sans-serif;
+        }
+        .row{
+            font-size: 20px;
+            width: 800px;
+            
+        }
+        input{
+            font-size: 20px;
+            padding: 10px;
+        }
+        #name{
+            width: 100%;
+        }
+        #cinema{
+            width: 40%;
+            
+        }
+        select{
+            font-size: 20px;
+            padding: 10px;
+            margin-right: 22px;
+        }
+
+        #time{
+            width: 25%;
+        }
+        
+        #submit{
+            margin-top: 30px;
+            background-color: black;
+            color: aliceblue;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <form action="">
+        <div class="row">
+            <p>Название фильма:</p>
+            <input type="text" placeholder="Название фильма" id = "name">
+        </div>
+        <div class="row">
+            <p>Кинотеатры:</p>
+            <select name="" id="cinema">
+                <option value="chaplin cinema">chaplin cinema</option>
+                <option value="kinopark">kinopark</option>
+                <option value="lumiera">lumiera</option>
+            </select>
+            <select name="" id="time">
+                <option value="00">11</option>
+                <option value="00">12</option>
+                <option value="00">13</option>
+                <option value="00">14</option>
+                <option value="00">15</option>
+                <option value="00">16</option>
+                <option value="00">17</option>
+                <option value="00">18</option>
+                <option value="00">19</option>
+                <option value="00">20</option>
+                <option value="00">21</option>
+                <option value="00">22</option>
+                <option value="00">23</option>
+                <option value="00">00</option>
+            </select>
+            <select name="" id="time">
+                <option value="00">00</option>
+                <option value="15">15</option>
+                <option value="30">30</option>
+                <option value="45">45</option>
+            </select>
+        </div>
+        <div class="row">
+            <input type="submit" id="submit">
+        </div>
+        </form>
+    </div>
+</body>
+</html>
