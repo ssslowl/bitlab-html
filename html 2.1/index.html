@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        .row{
+            display: flex;
+        }
+        .column{
+            font-family: sans-serif;
+            font-size: 20px;
+            margin-right: 20px;
+            width: 200px;
+        }
+        #submit{
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <form action="">
+        <div class="row">
+            <div class="column">
+                <p>Имя</p>
+                <input type="text" name="name" id="">
+            </div>
+            <div class="column">
+                <p>Фамилия</p>
+                <input type="text" name="name" id="">
+            </div>
+            <div class="column">
+                <p>Отчество</p>
+                <input type="text" name="name" id="">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="column">
+                <p>Страна</p>
+                <select name="Country" id="country">
+                    <optgroup>Азия</optgroup>
+                    <option value="Kazakhstan">Казахстан</option>
+                    <option value="Korea">Корея</option>
+                    <option value="Japan">Япония</option>
+                    <optgroup>Европа</optgroup>
+                    <option value="Sweden">Швеция</option>
+                    <option value="Spain">Испания</option>
+                    <option value="Italy">Италия</option>
+                </select>
+            </div>
+            <div class="column">
+                <p>Город</p>
+                <select name="Country" id="country">
+                    <optgroup>Азия</optgroup>
+                    <option value="Kazakhstan">Алматы</option>
+                    <option value="Korea">Сеул</option>
+                    <option value="Japan">Осака</option>
+                    <optgroup>Европа</optgroup>
+                    <option value="Sweden">Стокгольм</option>
+                    <option value="Spain">Барселона</option>
+                    <option value="Italy">Рим</option>
+                </select>
+            </div>
+            <div class="column">
+                <p>Улица</p>
+                <input type="text" name="name" id="">
+            </div>
+        </div>
+
+        <input type="submit" value="Зарегистрировать данные" id="submit">
+        </form>
+    </div>
+</body>
+</html>
