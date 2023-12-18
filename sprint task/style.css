@@ -1,0 +1,121 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+nav, ul, .logo{
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 20px;
+    align-items: center;
+    background-color: #84000F;
+}
+li{
+    display: block;
+    
+
+}
+nav{
+    height: 50px;
+}
+ul{
+    width: 350px;
+}
+a{
+    color: #eea0a8;
+    text-decoration: none;
+    transition: all 0.1s ease 0s;
+}
+
+a:hover{
+    text-decoration: underline;
+    font-size: 20px;
+}
+
+.logo{
+    color:aliceblue;
+    font-size: 25px;
+}
+
+
+.logo p{
+    margin-right: 5px;
+    font-weight: 700;
+    
+}
+
+.mainnews{
+    display: flex;
+    justify-content: space-between;
+    padding: 30px;
+    background-color: #AFDBDC;
+}
+
+img{
+    width: 500px;
+}
+
+.content{
+    margin-top: 30px;
+}
+
+#topic{
+    font-size: 30px;
+    text-align: center;
+    margin: 15px 0;
+}
+
+.newscards{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    
+}
+
+.card{
+    width: 350px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    border: solid;
+    border-width: 1px;
+}
+
+.card img{
+    width: 450px;
+    height: 275px;
+}
+
+.card h2{
+    text-align: left;
+    margin: 10px 0;
+}
+
+.text{
+    padding: 20px;
+}
+
+.text p{
+    font-weight:200;
+    margin-bottom: 25px;
+}
+
+
+.button{
+    align-items: start;
+    padding: 10px 15px;
+    background-color: #87000F;
+    margin-top: 20px;
+}
+
+
+
+.maintext{
+    text-align: justify;
+    font-size: 20px;
+    margin: 0px 30px;
+}
