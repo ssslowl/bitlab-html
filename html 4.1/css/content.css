@@ -1,0 +1,10 @@
+.content{
+    display: flex;
+    justify-content: space-between;
+    margin: 30px;
+}
+
+.profile-card{
+    width: 365px;
+
+}
