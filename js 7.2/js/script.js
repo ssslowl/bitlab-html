@@ -15,4 +15,4 @@ for (let i = 0; i < numbers.length; i++) {
 }
 
 const geometricMean = Math.pow(product, 1 / numbers.length);
-console.log("Геометрическая средняя:", geometricMean);
+alert("Геометрическая средняя: " + geometricMean);
