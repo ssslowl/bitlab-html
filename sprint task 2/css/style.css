@@ -1,0 +1,301 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #E8EAED ;
+    
+}
+
+header{
+    display: flex;
+    align-items: center;
+    background-color: #4F76A1;
+    height: 6%;
+    padding: 0 15rem;  
+}
+
+.logo{
+    margin-left: 20px;
+    margin-right: 150px;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 900;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+
+.search{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #324766;
+    border-radius: 15px;
+}
+
+.search input{
+    font-size: 15px;
+    border-radius: 15px;
+    padding: 10px 15px;
+    padding-left: 5px;
+    border: none;
+    outline: none;
+    color: white;
+    background-color: #324766;
+}
+.search img{
+    margin-left: 10px;
+    width: 13px;
+}
+
+main{
+    display: flex;
+    justify-content: space-around;
+    height: 80%; 
+    padding: 0 15rem;
+}
+
+main nav{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 10%;
+}
+
+nav a{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-decoration: none;
+    color: #003262;
+    font-size: 16px;
+    padding: 10px 0;
+    
+}
+
+
+.avatar .img{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width:300px;
+    height: 300px;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+
+.img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.block2{
+    width: 700px;
+}
+
+
+
+#box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 15px;
+    margin: 15px;
+}
+
+.avatar button{
+    background-color: #E8EAED;
+    border: none;
+    outline: none;
+    color: #000;
+    font-size: 16px;
+    padding: 10px 0;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+
+
+.title{
+    display: flex;
+}
+
+.title *{
+    margin-right: 10px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+#count{
+    color: #0000006b;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.block1 .row{
+    display: flex;
+    justify-content: space-around;
+}
+
+.block1 .friend img{
+
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+
+    object-fit: cover;
+}
+
+.block1 .friend{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+
+.block2{
+    width: 900px;   
+}
+
+.topic{
+    border-bottom: solid;
+    border-width: 0.5px;
+    border-color: #a5a2a24e;
+    padding: 20px 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+#maininfo{
+    display: flex;
+    justify-content: space-between;
+}
+
+#name{
+    font-size: 30px;
+}
+#quote{
+    margin-top: 5px;
+    font-size: 20px;
+}
+
+
+
+
+
+
+
+#minorinfo{
+    display: flex;
+}
+
+.names, .values{
+    width: 300px;
+}
+
+.names p{
+    margin: 10px 0;
+}
+
+.values p{
+    margin: 10px 0;
+}
+p a{
+    text-decoration: none;
+    color: #003262;
+    font-size: 16px;
+    padding: 10px 0;
+}
+
+
+
+
+.num{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding: 25px 0;
+    padding-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#stats{
+    display: flex;
+    justify-content: space-around;
+}
+
+.num .numvalue{
+    font-size: 30px;
+    color: #004E99;
+    font-weight: 500;
+    padding-bottom: 10px;
+}
+
+.num .numname{
+    font-size: 15px;
+    color: #0000006b;
+}
+
+
+.photoline{
+    
+    display: flex;
+    margin: 20px 5px;
+    size: 100%;
+    justify-content: space-between;
+    overflow: hidden;
+
+}
+
+.photoline img{
+    width: 20%;
+    object-fit: cover;
+
+}
+
+#authorname{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 18px;
+}
+
+.authorlogo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:70px;
+    overflow: hidden;
+    border-radius: 50px;
+    margin-right: 25px;
+
+}
+
+.info img{
+    width: 100px;
+    object-fit: cover;
+}
+
+.post .info{
+    display: flex;
+    align-items: center;
+    
+}
+.post #date{
+    margin-top: 10px;
+}
+
+.content{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 500;
+    margin-top: 20px;
+}
+
+.content img{
+    margin-top: 20px;
+    max-width: 700px;
+}
+
+
