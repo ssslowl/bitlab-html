@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sum and Average</title>
+</head>
+<body>
+    <script>
+        var n = parseInt(prompt("Enter the number of elements:"));
+        var numbers = [];
+
+        for (var i = 0; i < n; i++) {
+            var element = parseInt(prompt("Enter element " + (i + 1) + ":"));
+            numbers.push(element);
+        }
+
+        var sum = 0;
+        for (var i = 0; i < numbers.length; i++) {
+            sum += numbers[i];
+        }
+
+        var average = sum / numbers.length;
+
+        document.write("Sum: " + sum + "<br>");
+        document.write("Average: " + average);
+    </script>
+</body>
+</html>
