@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login Page</title>
+</head>
+<body>
+    <script>
+        // Define the users array
+        var users = [
+            {"login":"ilyas", "password": "qwerty"},
+            {"login":"eldar", "password": "qqqqq"},
+            {"login":"assylkhan", "password": "qweqwe"},
+            {"login":"anel", "password": "asdasd"},
+            {"login":"alibek", "password": "aaaaaa"}
+        ];
+
+        // Function to handle login
+        function login() {
+            // Get the input values
+            var loginInput = document.getElementById("login").value;
+            var passwordInput = document.getElementById("password").value;
+
+            // Check if the user exists in the array
+            var userExists = false;
+            for (var i = 0; i < users.length; i++) {
+                if (users[i].login === loginInput && users[i].password === passwordInput) {
+                    userExists = true;
+                    break;
+                }
+            }
+
+            // Display the appropriate message
+            if (userExists) {
+                alert("Welcome, you are authenticated");
+            } else {
+                alert("User not found");
+            }
+        }
+    </script>
+
+    <h1>Login Page</h1>
+    <label for="login">Login:</label>
+    <input type="text" id="login" required><br>
+    <label for="password">Password:</label>
+    <input type="password" id="password" required><br>
+    <button onclick="login()">Login</button>
+</body>
+</html>
