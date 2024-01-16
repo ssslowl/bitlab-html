@@ -10,3 +10,80 @@ username = document.getElementById("name");
 email = document.getElementById("email");
 password = document.getElementById("password");
 
+usernameform = document.getElementById("nameform");
+emailform = document.getElementById("emailform");
+passwordform = document.getElementById("passwordform");
+
+let error = document.createElement("p");
+error.setAttribute("class", "alert alert-danger");
+
+
+
+function CreateError(formname, errorname, errormessage){
+    let error = document.createElement("p");
+    error.setAttribute("class", "alert alert-danger");
+    error.setAttribute("id", errorname);
+    error.innerHTML = "username is empty!";
+    formname.appendChild(error);
+}
+
+
+
+function hasElement(array, aim){
+    for(let i in array){
+        if(array[i] == aim){
+            return true;
+        }
+    }
+
+    return false;
+}
+
+
+
+function login(){
+    let errors = document.getElementsByClassName("alert");
+
+    for(let i = 0; i < errors.length; i++){
+        errors[i].remove();
+    }
+
+    console.log(errors);
+
+
+
+    if(username.value == ""){
+
+        CreateError(usernameform, "userEmpty",)
+        
+        error.setAttribute("id", "userEmpty");
+        error.innerHTML = "username is empty!";
+        usernameform.appendChild(error);
+        
+    }else if(usernames.indexOf(username.value) != -1){
+
+        error.setAttribute("id", "userExist");
+        error.innerHTML = "username is already taken!";
+        usernameform.appendChild(error);
+    }
+
+
+    if(email.value == ""){
+        
+        error.setAttribute("id", "emailEmpty");
+        error.innerHTML = "email is empty!";
+        emailform.appendChild(error);
+        
+    }else if(email.value.indexOf("@") == -1){
+
+        error.setAttribute("id", "invalidEmail");
+        error.innerHTML = "email is invalid";
+        emailform.appendChild(error);
+    }else if(hasElement(emails, email.value)){
+        error.setAttribute("id", "existingEmail");
+        error.innerHTML = "email is already in use";
+        emailform.appendChild(error);
+    }
+}
+
+
