@@ -47,11 +47,6 @@
         
     </div>
 
-    <div class="row">
-        <div class="col">
-            <input type="button" onclick="convert()" class = "btn btn-primary"value="Конвертировать">
-        </div>
-    </div>
 </div>
 
 <!-- BEGIN: Bootstrap JS CDN -->
@@ -65,8 +60,22 @@
 
 <script>
         let current = document.getElementById("current");
+
+        current.addEventListener("keydown", function(){
+            if(current.value < 0){
+                alert("Введите положительное число");
+                current.value = 0;
+            }else{
+                convert();
+            }
+        })
+
+
         var type = document.getElementById("type");
 
+        type.addEventListener("change", function(){
+            convert();
+        })
 
         let USD = document.getElementById("USD");
         let KZT = document.getElementById("KZT");
