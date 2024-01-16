@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        input{
+            height: 25px;
+            width: 50px;
+            margin: 0 10px;
+            background-color: #5e5bd9;
+            border-radius: 5px;
+            color: #fff;
+            transition: all 0.3s ease 0s;
+            
+        }
+
+        input:hover{
+            background-color: #fff;
+            color: #5e5bd9;
+
+        }
+
+        input:active{
+            background-color: #eceaea;
+            color: #5e5bd9;
+        }
+
+
+        body{
+            display: flex;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <input type="button" onclick="decrease()" value="-" name="-">
+    <p id = "counter">0</p>
+    <input type="button" onclick="increase()" value="+" name = "+">
+
+
+
+    <script>
+        let counter = document.getElementById("counter");
+
+        function increase(){
+            counter.innerHTML = parseInt(counter.innerHTML) + 1;
+        }
+
+        function decrease(){
+            counter.innerHTML = parseInt(counter.innerHTML) - 1;
+        }
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display: flex;
+        }
+        .row{
+            margin:0 50px 50px 0;
+        }
+
+        #quarter{
+            width: 60px;
+        }
+
+        #cvvnum{
+            width: 60px;
+        }
+    </style>
+</head>
+<body>
+    <div class="names">
+        <div class="row">
+            CARD:
+        </div>
+        <div class="row">
+            NAME SURNAME:
+        </div>
+        <div class="row">
+            CVV:
+        </div>
+        <input type="button" onclick="submit()" name = "complete" value="complete">
+    </div>
+    <div class="forms">
+        <div class="row" id = "cardnum">
+            <input type="text" id ="quarter">
+            <input type="text" id ="quarter">
+            <input type="text" id ="quarter">
+            <input type="text" id ="quarter">
+        </div>
+        <div class="row" id="fullname">
+            <input type="text" id="name">
+        </div>
+        <div class="row" id = "cvv">
+            <input type="password" id = "cvvnum">
+        </div>
+
+        
+    </div>
+
+
+    <script>
+
+        let database = [{cardnum:"1234123412341234", fullname:"Ilyas Sarsenbek", cvv:"123"}, {cardnum:"1234123412251234", fullname:"Ilyas Zhansygyrov", cvv:"123"}, {cardnum:"1234123412341248", fullname:"Ilyas almasbek", cvv:"123"}]
+
+        let quarters = document.querySelectorAll('[id="quarter"]');
+        let fullname = document.getElementById("name");
+        let cvv = document.getElementById("cvvnum");
+        let cardnum = "";
+        
+
+        function submit(){
+            quarters.forEach(function(item){
+                cardnum += item.value;
+            })
+            
+
+            console.log(cardnum);
+            
+            for(let i = 0; i < database.length; i++){
+                if(cardnum == database[i].cardnum && fullname.value == database[i].fullname && cvv.value == database[i].cvv){
+                    alert("Welcome, you are authenticated");
+                    break;
+                }else if(i == database.length - 1){
+                    quarters.forEach(function(item){
+                        item.style.border = "1px solid red";
+                    })
+                    fullname.style.border = "1px solid red";
+                    cvv.style.border = "1px solid red";
+                }
+            }
+            
+            cardnum = "";
+        }
+
+    </script>
+</body>
+</html>

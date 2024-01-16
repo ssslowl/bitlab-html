@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Authorization Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .container {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        
+        h1 {
+            text-align: center;
+            margin-top: 0;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+        
+        .btn {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: #fff;
+            text-align: center;
+            text-decoration: none;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+        
+        .btn:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Authorization</h1>
+            <div class="form-group">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" placeholder="Enter your username">
+            </div>
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" placeholder="Enter your password">
+            </div>
+            <button class="btn" onclick="logCheck()">Login</button>
+    </div>
+
+
+
+
+    <script>
+
+        let database = [{login:"ssslowl", password:"123456"}, {login:"admin", password:"admin"}, {login:"qwerty", password:"qwerty"}]
+
+
+        let login = document.getElementById("username");
+        let password = document.getElementById("password");
+        let forms = document.querySelectorAll("input");
+
+
+        function logCheck(){
+            console.log(login.value);
+            console.log(password.value);
+            for(let i = 0; i < database.length; i++){
+                if(login.value == database[i].login && password.value == database[i].password){
+                    alert("Welcome, you are authenticated");
+                }else{
+                    forms.forEach(function(item){
+                        item.style.border = "1px solid red";
+                    })
+                }
+            }
+
+        }
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>
