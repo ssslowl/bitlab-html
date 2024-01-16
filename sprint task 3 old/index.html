@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        .row{
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+    <!-- BEGIN: Bootstrap CDN -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<!-- END: Bootstrap CDN -->
+
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <p>Введите сумму</p>
+            <input type="text" class="form-control" id = "current" placeholder="Active Text Form">
+        </div>
+        <div class="col-sm-">
+            <p>Валюта</p>
+            <select class="form-control"  id = "type" aria-label="Default select example">
+                <option value="USD">USD</option>
+                <option value="KZT">KZT</option>
+                <option value="EUR">EUR</option>
+              </select>
+        </div>
+        <div class="col">
+            <p>USD</p>
+            <input id = "USD" type="text" class="form-control" placeholder="Inactive Text Form 1" readonly>
+        </div>
+        <div class="col">
+            <p>KZT</p>
+            <input id = "KZT" type="text" class="form-control" placeholder="Inactive Text Form 2" readonly>
+        </div>
+        <div class="col">
+            <p>EUR</p>
+            <input id = "EUR" type="text" class="form-control" placeholder="Inactive Text Form 3" readonly>
+        </div>
+
+        
+    </div>
+
+    <div class="row">
+        <div class="col">
+            <input type="button" onclick="convert()" class = "btn btn-primary"value="Конвертировать">
+        </div>
+    </div>
+</div>
+
+<!-- BEGIN: Bootstrap JS CDN -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<!-- END: Bootstrap JS CDN -->
+
+
+
+
+<script>
+        let current = document.getElementById("current");
+        var type = document.getElementById("type");
+
+
+        let USD = document.getElementById("USD");
+        let KZT = document.getElementById("KZT");
+        let EUR = document.getElementById("EUR");
+
+        let KZTval = [429, '-', 507];
+        let USDval =['-', 0.0023201, 1.18647889 ];
+        let EURval =[0.00196463,0.850097974,'-']
+
+
+
+        function convert(){
+            
+        switch (type.value){
+            case 'USD':
+                USD.setAttribute("value", USDval[0]);
+                KZT.setAttribute("value", Math.round((current.value/USDval[1])*100)/100);
+                EUR.setAttribute("value", Math.round((current.value/USDval[2])*100)/100);
+                break;
+            case 'KZT':
+
+                USD.setAttribute("value", Math.round((current.value/KZTval[0])*100)/100);
+                KZT.setAttribute("value", KZTval[1]);
+                EUR.setAttribute("value", Math.round((current.value/KZTval[2])*100)/100);
+                break;
+            case 'EUR':
+
+                USD.setAttribute("value", Math.round((current.value/EURval[0])*100)/100);
+                KZT.setAttribute("value", Math.round((current.value/EURval[1])*100)/100);
+                EUR.setAttribute("value", EURval[2]);
+            break;
+            
+        }
+        }
+</script>
+</body>
+</html>
