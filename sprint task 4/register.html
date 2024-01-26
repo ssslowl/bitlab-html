@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Page</title>
+    <link rel="stylesheet" href="css/register.css">
+</head>
+<body>
+
+    <header>
+        bitlab
+    </header>
+
+    <nav>
+        <a href="index.html">login</a>
+        <a href="register.html">register</a>
+    </nav>
+
+    <div class="container">
+        <div class="registration-form">
+            <label for="fullname">Full Name:</label>
+            <input type="text" id="fullname" name="fullname" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+
+            <label for="country">Country:</label>
+            <select id="country" name="country" required>
+                <option value="">Select Country</option>
+                <option value="Kazakhstan">Kazakhstan</option>
+                <option value="Russia">Russia</option>
+                <option value="China">China</option>
+                <option value="Korea">Korea</option>
+            </select>
+
+            <label for="birthdate">Birthdate:</label>
+            <input type="date" id="birthdate" name="birthdate" required>
+
+            <button onclick="register()">Register</button>
+            <button onclick="clearStorage()">clear local storage</button>
+        </div>
+    </div>
+    <script src="js/index.js"></script>
+</body>
+</html>
